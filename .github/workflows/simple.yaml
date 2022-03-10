@@ -1,27 +1,14 @@
-name: Shell commands
+name: Docker Build
 
 on: [push]
+
+
 jobs:
-  run-shell-command:
+  Docker-build:
     runs-on: ubuntu-latest
+
     steps:
-      - name: echo string
-        run: echo "Hello World"
-      - name: multiple script
-        run: |
-          node -v
-          npm -v
-      - name: Python script
-        run: |
-          import platform
-          print (platform.processor())
-        shell: python
-  run-windows-commands:
-    runs-on: windows-latest
-    needs: ["run-shell-command"]
-    steps:
-      - name: Directory
-        run: Get-Location
-      - name: Directory Bash
-        run: pwd
-        shell: bash
+    - uses: actions/checkout@v2
+    - name: Docker-build
+      run: |-
+        docker build .
