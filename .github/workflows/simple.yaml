@@ -9,6 +9,6 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - name: Docker-build
+    - name: Dockerbuild
       run: |-
         docker build .
