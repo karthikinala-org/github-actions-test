@@ -10,6 +10,9 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
+    - name: Run script file
+      run: echo "Main develop pipeline running"
+      shell: bash
     - name: Dockerbuild
       run: |-
         docker build .
