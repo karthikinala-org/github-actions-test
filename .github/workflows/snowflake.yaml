@@ -1,0 +1,16 @@
+name: Docker Build
+
+on: 
+  workflow_dispatch:
+  repository_dispatch:
+    types: snowflake-package
+
+jobs:
+  Docker-build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Dockerbuild
+      run: |-
+        docker build .
