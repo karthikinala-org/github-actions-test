@@ -1,11 +1,13 @@
 name: Docker Build
 
-on: workflow_dispatch
-
+on: 
+  workflow_dispatch:
+  repository_dispatch:
+    types: [test]
 
 jobs:
   Docker-build:
-    runs-on: self-hosted
+    runs-on: ubuntu-latest
 
     steps:
     - uses: actions/checkout@v2
