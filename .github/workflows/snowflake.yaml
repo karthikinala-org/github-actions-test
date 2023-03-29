@@ -11,6 +11,9 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
+    - name: Run script file
+      run: echo "Snowflake pipeline running"
+      shell: bash
     - name: Dockerbuild
       run: |-
         docker build .
