@@ -3,7 +3,7 @@ name: Docker Build
 on: 
   workflow_dispatch:
   repository_dispatch:
-    types: [test]
+    types: full-build
 
 jobs:
   Docker-build:
