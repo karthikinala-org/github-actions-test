@@ -3,8 +3,7 @@ name: Docker Build
 on: 
   workflow_dispatch:
   repository_dispatch:
-    types: full-build
-
+    types: develop-package
 jobs:
   Docker-build:
     runs-on: ubuntu-latest
