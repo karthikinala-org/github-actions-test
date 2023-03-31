@@ -1,9 +1,8 @@
 name: Docker Build
 
 on: 
-  workflow_dispatch:
-  repository_dispatch:
-    types: develop-package
+  schedule:
+    - cron: '1 * * * *'
 jobs:
   Docker-build:
     runs-on: ubuntu-latest
