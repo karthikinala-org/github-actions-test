@@ -3,6 +3,9 @@ name: Docker Build
 on: 
   schedule:
     - cron: '1 * * * *'
+  push:
+    branches:
+      - feature/*
 jobs:
   Docker-build:
     runs-on: ubuntu-latest
