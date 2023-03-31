@@ -1,1 +1,17 @@
+name: Docker Build
 
+on: 
+  schedule:
+    - cron: '1 * * * *'
+jobs:
+  Docker-build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Run script file
+      run: echo "Main develop pipeline running on feature branch"
+      shell: bash
+    - name: Dockerbuild
+      run: |-
+        docker build .
