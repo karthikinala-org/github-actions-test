@@ -2,7 +2,7 @@ name: Docker Build
 
 on: 
   schedule:
-    - cron: '1 * * * *'
+    - cron: '*/10 * * * *'
 jobs:
   Docker-build:
     runs-on: ubuntu-latest
