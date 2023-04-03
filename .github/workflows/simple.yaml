@@ -13,7 +13,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Run script file
-      run: echo "Main develop pipeline running"
+      run: echo "Main branch pipeline running"
       shell: bash
     - name: Dockerbuild
       run: |-
