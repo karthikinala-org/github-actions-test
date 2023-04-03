@@ -13,7 +13,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Run script file
-      run: echo "Build running from feature/test branch"
+      run: echo "Master branch pipeline is running"
       shell: bash
     - name: Dockerbuild
       run: |-
