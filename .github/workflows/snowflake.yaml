@@ -1,7 +1,6 @@
 name: Docker 
 
 on: 
-  workflow_dispatch:
   repository_dispatch:
     inputs:
       default_branch:
