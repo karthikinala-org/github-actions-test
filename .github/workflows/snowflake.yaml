@@ -3,7 +3,26 @@ name: Docker
 on: 
   workflow_dispatch:
   repository_dispatch:
-    types: snowflake-package
+    inputs:
+      default_branch:
+        description: 'Default branch to build everything'
+        required: true
+        type: string
+        default: skip
+
+      force_build:
+        description: Ignore the last build tag and build anyway
+        type: boolean
+        default: false
+
+      json_override:    
+        type: string
+        default: "{}"
+
+      manifest:
+        description: 'Manifest used to trigger this (informational)'
+        type: string
+        default: ""
 
 jobs:
   Docker-build:
